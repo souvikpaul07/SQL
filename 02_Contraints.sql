@@ -1,0 +1,28 @@
+CREATE DATABASE XYZ_company;
+USE XYZ_company;
+
+CREATE TABLE Employees_Data(
+	ID INT PRIMARY KEY,
+    NAME VARCHAR(50) NOT NULL,
+    SALARY BIGINT NOT NULL
+);
+
+INSERT INTO Employees_Data VALUES(1,"Adam",25000);
+INSERT INTO Employees_Data VALUES(2,"bob",30000);
+INSERT INTO Employees_Data VALUES(3,"casey",40000);
+SELECT * FROM Employees_Data;
+
+
+
+# DEFAULT CONSTRAINT
+CREATE TABLE Employees_data_1(
+	ID INT PRIMARY KEY,
+	NAME VARCHAR(50) NOT NULL,
+    SALARY BIGINT DEFAULT 25000
+);
+
+INSERT INTO Employees_Data_1 VALUES(1,"elon",55000);
+INSERT INTO Employees_Data_1(ID,NAME) VALUES(2,"ron"); 
+
+SELECT * FROM Employees_Data_1;
+
